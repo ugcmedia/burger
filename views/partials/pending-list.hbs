@@ -1,0 +1,20 @@
+{{#if pending}}
+  <div class="card col-md-5 p-0 mt-3">
+    <div class="card-header">
+      Yet to Devour
+    </div>
+      <ul class="list-group">
+        {{#each pending}}
+          <li class="list-group-item justify-content-between">
+            {{this.id}}. {{this.name}}
+            <form action="/{{this.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="devoured" value="true">
+              <button class="btn btn-danger badge">Devour <i class="ml-2 fal fa-utensils-alt fa-spin"></i></button>
+            </form>
+          </li>
+        {{/each}}
+      </ul>
+  </div>
+{{else}}
+  <div class="col-md"></div>
+{{/if}}

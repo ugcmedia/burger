@@ -1,0 +1,14 @@
+<div class="container pb-5">
+  <div class="d-flex item flex-column flex-sm-column flex-md-row flex-lg-row justify-content-between">
+    {{> pending-list}}
+    {{> devoured-list}}
+  </div>
+  <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+    <form class="d-flex flex-column justify-content-around align-items-center" action="/" method="POST">
+      <div class="form-group">
+        <input type="text" class="form-control" id="burger" name="burger" placeholder="Enter Burger">
+      </div>
+      <button type="submit" class="btn btn-primary btn-md">Add</button>
+    </form>
+  </div>
+</div>

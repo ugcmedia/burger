@@ -1,0 +1,19 @@
+{{#if devoured}}
+  <div class="card col-md-6 p-0 mt-3">
+    <div class="card-header">
+      Devoured
+    </div>
+    <div class="card-block p-0">
+      <ul class="list-group">
+        {{#each devoured}}
+          <li class="list-group-item justify-content-between">
+            {{this.id}}. {{this.name}}
+            <small class="text-muted">{{this.myDate}}</small>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+{{else}}
+  <div class="col-md"></div>
+{{/if}}
